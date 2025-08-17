@@ -22,24 +22,24 @@ counter.decrement(); // 4
  * @param {integer} init
  * @return { increment: Function, decrement: Function, reset: Function }
  */
-var createCounterII = function (init) {
+function createCounterII(init) {
   let current = init;
 
   return {
-    increment: function () {
+    increment: () => {
       current++;
       return current;
     },
-    decrement: function () {
+    decrement: () => {
       current--;
       return current;
     },
-    reset: function () {
+    reset: () => {
       current = init;
       return current;
     },
   };
-};
+}
 
 /**
  * const counter = createCounterII(5)

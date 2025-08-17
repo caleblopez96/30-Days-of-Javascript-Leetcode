@@ -11,7 +11,7 @@ type ToBeOrNotToBe = {
   notToBe: (val: any) => boolean;
 };
 
-function expect(val: any): ToBeOrNotToBe {
+function expect2(val: any): ToBeOrNotToBe {
   return {
     toBe: function (otherVal: any) {
       if (val === otherVal) {
@@ -31,6 +31,6 @@ function expect(val: any): ToBeOrNotToBe {
 }
 
 /**
- * expect(5).toBe(5); // true
- * expect(5).notToBe(5); // throws "Equal"
+ * expect2(5).toBe(5); // true
+ * expect2(5).notToBe(5); // throws "Equal"
  */

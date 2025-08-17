@@ -14,19 +14,19 @@ type Counter = {
   reset: () => number;
 };
 
-function createCounterII(init: number): Counter {
+function createCounterIITS(init: number): Counter {
   let current = init;
 
   return {
-    increment: function () {
+    increment: () => {
       current++;
       return current;
     },
-    decrement: function () {
+    decrement: () => {
       current--;
       return current;
     },
-    reset: function () {
+    reset: () => {
       current = init;
       return current;
     },
@@ -34,7 +34,7 @@ function createCounterII(init: number): Counter {
 }
 
 /**
- * const counter = createCounterII(5)
+ * const counter = createCounterIITS(5)
  * counter.increment(); // 6
  * counter.reset(); // 5
  * counter.decrement(); // 4
