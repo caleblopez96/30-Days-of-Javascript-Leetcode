@@ -14,7 +14,7 @@ type Fn = (n: number, i: number) => any;
 
 function filter(arr: number[], fn: Fn): number[] {
   let filteredArray: number[] = [];
-  for (let i = 0; i < arr.length; i++) {
+  for (let i: number = 0; i < arr.length; i++) {
     if (fn(arr[i], i)) {
       filteredArray.push(arr[i]);
     }

@@ -18,9 +18,40 @@ The function increases each value in the array by one.
  * @param {Function} fn
  * @return {number[]}
  */
+
+// SOLUTION 1:
+
 function map(arr, fn) {
   for (let i = 0; i < arr.length; i++) {
     arr[i] = fn(arr[i], i);
   }
   return arr;
 }
+
+// SOLUTION 2:
+
+function map2(arr, fn) {
+  let i = 0;
+  for (const num of arr) {
+    arr[i] = fn(num, i);
+    i++;
+  }
+  return arr;
+}
+
+// Step by step:
+
+// 1. Loop through each element of the array.
+//    Solution 1: for (let i = 0; i < arr.length; i++) {}
+//    Solution 2: for (const num of arr) { track i manually }
+
+// 2. Apply the function to the element (with its index)
+//    Solution 1: fn(arr[i], i);
+//    Solution 2: fn(num, i);
+
+// 3. Replace the element in the original array with the result.
+//    Solution 1: arr[i] = fn(arr[i], i);
+//    Solution 2: arr[i] = fn(num, i)
+
+// 4. After finishing, return the array.
+//    return arr;
