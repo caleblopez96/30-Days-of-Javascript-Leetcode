@@ -8,6 +8,7 @@ If the length of the array is 0, the function should return init.
 Please solve it without using the built-in Array.reduce method.
 */
 
+// @ts-nocheck
 type Fn = (accum: number, curr: number) => number;
 
 function reduce(nums: number[], fn: Fn, init: number): number {

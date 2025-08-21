@@ -25,3 +25,8 @@ var filter = function (arr, fn) {
   }
   return filteredArray;
 };
+
+// Step by step:
+
+// 1. Create an empty array to hold the filtered elements:
+//    let filteredArray = [];
