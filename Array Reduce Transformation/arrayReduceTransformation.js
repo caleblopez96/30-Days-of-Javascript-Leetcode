@@ -32,17 +32,17 @@ function reduceArray(nums, fn, init) {
 
 // Step by step:
 
-// 1. Create an accumulator
-// let val = init;
+// 1. Create an accumulator:
+//    let val = init;
 
-// 2. Iterate through the array
-// for (let i = 0; i < nums.length; i++) {}
-// OR
-// for (const num of nums) {}
+// 2. Iterate through the array:
+//    for (let i = 0; i < nums.length; i++) {}
+//    OR
+//    for (const num of nums) {}
 
 // 3. Update the accumulator during each iteration:
-// In the for loop version, access each element by index: val = fn(val, nums[i]);
-// In the for...of loop, access each element directly: val = fn(val, num)
+//    In the for loop version, access each element by index: val = fn(val, nums[i]);
+//    In the for...of loop, access each element directly: val = fn(val, num)
 
 // 5. Return the accumulated result:
-// return val;
+//    return val;

@@ -9,7 +9,8 @@ You may assume each function in the array accepts one integer as input and retur
 */
 type F = (x: number) => number;
 
-function compose2(functions: F[]): F {
+//@ts-ignore: duplicate function name
+function compose(functions: F[]): F {
   if (functions.length === 0) {
     return (x) => x;
   }

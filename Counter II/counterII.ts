@@ -14,7 +14,8 @@ type Counter = {
   reset: () => number;
 };
 
-function createCounterIITS(init: number): Counter {
+//@ts-ignore: duplicate function name
+function createCounterII(init: number): Counter {
   let current = init;
 
   return {
@@ -39,3 +40,26 @@ function createCounterIITS(init: number): Counter {
  * counter.reset(); // 5
  * counter.decrement(); // 4
  */
+
+// Step by step:
+
+// 1. Create a variable to store the current value, initialized to init:
+//    let current = init;
+//    - this variable is in the closure so each method can access and modify it
+
+// 2. Return an object with three methods: increment, decrement, and reset
+
+// 3. increment():
+//    - Increases current by 1: current++
+//    - Returns the updated value
+
+// 4. decrement():
+//    - Decreases current by 1: current--
+//    - Returns the updated value
+
+// 5. reset():
+//    - Sets current back to the original init value: current = init
+//    - Returns the reset value
+
+// 6. Each method maintains access to current through closure
+//    - This allows the state to persist between method calls without exposing current directly

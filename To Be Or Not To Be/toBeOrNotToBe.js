@@ -3,28 +3,13 @@ Write a function expect that helps developers test their code. It should take in
 
 toBe(val) accepts another value and returns true if the two values === each other. If they are not equal, it should throw an error "Not Equal".
 notToBe(val) accepts another value and returns true if the two values !== each other. If they are equal, it should throw an error "Equal".
-
-Example 1:
-
-Input: func = () => expect(5).toBe(5)
-Output: {"value": true}
-Explanation: 5 === 5 so this expression returns true.
-Example 2:
-
-Input: func = () => expect(5).toBe(null)
-Output: {"error": "Not Equal"}
-Explanation: 5 !== null so this expression throw the error "Not Equal".
-Example 3:
-
-Input: func = () => expect(5).notToBe(null)
-Output: {"value": true}
-Explanation: 5 !== null so this expression returns true.
 */
 
 /**
  * @param {string} val
  * @return {Object}
  */
+
 function expect(val) {
   return {
     toBe: function (otherVal) {
@@ -48,3 +33,21 @@ function expect(val) {
  * expect(5).toBe(5); // true
  * expect(5).notToBe(5); // throws "Equal"
  */
+
+// Step by step:
+
+// Step 1: Create a function expect that accepts a value (val)
+//    - This value will be compared against other values in the returned methods
+
+// Step 2: Return an object with two methods: toBe and notToBe
+//    - Both methods have access to val through closure
+
+// Step 3: toBe(otherVal)
+//    - Compares val and otherVal using strict equality (===)
+//    - If equal, return true
+//    - If not equal, throw an Error("Not Equal")
+
+// Step 4: notToBe(otherVal)
+//    - Compares val and otherVal using strict inequality (!==)
+//    - If not equal, return true
+//    - If equal, throw an Error("Equal")

@@ -12,9 +12,13 @@ function argumentsLength(...args) {
 console.log(argumentsLength(1, [], {})); // 3
 
 /**
- * argumentsLength(1, 2, 3); // 3
+ * argumentsLength(1, () => x, {}); // 3
  */
 
 // Step by step:
-// ...args is an array of arguments passed to the function.
-// use the length property to get the length of the args array
+
+// Step 1: Use rest parameters (...args) to capture all arguments passed to the function
+//    - This creates an array called args containing every argument
+
+// Step 2: Return the length of the args array to get the number of arguments
+//    return args.length

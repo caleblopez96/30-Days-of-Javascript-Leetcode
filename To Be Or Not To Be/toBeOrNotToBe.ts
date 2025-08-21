@@ -34,3 +34,21 @@ function expect2(val: any): ToBeOrNotToBe {
  * expect2(5).toBe(5); // true
  * expect2(5).notToBe(5); // throws "Equal"
  */
+
+// Step by step:
+
+// Step 1: Create a function expect that accepts a value (val)
+//    - This value will be compared against other values in the returned methods
+
+// Step 2: Return an object with two methods: toBe and notToBe
+//    - Both methods have access to val through closure
+
+// Step 3: toBe(otherVal)
+//    - Compares val and otherVal using strict equality (===)
+//    - If equal, return true
+//    - If not equal, throw an Error("Not Equal")
+
+// Step 4: notToBe(otherVal)
+//    - Compares val and otherVal using strict inequality (!==)
+//    - If not equal, return true
+//    - If equal, throw an Error("Equal")

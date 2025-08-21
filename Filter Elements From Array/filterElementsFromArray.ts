@@ -10,8 +10,10 @@ filteredArr should only contain the elements from the arr for which the expressi
 Please solve it without the built-in Array.filter method.
 */
 
+//@ts-ignore: duplicate type name
 type Fn = (n: number, i: number) => any;
 
+//@ts-ignore: duplicate function name
 function filter(arr: number[], fn: Fn): number[] {
   let filteredArray: number[] = [];
   for (let i: number = 0; i < arr.length; i++) {
@@ -21,3 +23,16 @@ function filter(arr: number[], fn: Fn): number[] {
   }
   return filteredArray;
 }
+
+// Step by step:
+
+// Step 1: Create an empty array to hold the filtered elements:
+//    let filteredArray = []
+
+// Step 2: Loop over the array passed to the filter() function:
+//    for (let i = 0; i < arr.length; i++) {}
+//    - Call the filtering function on each element and its index: fn(arr[i], i)
+//    - If result is truthy, push the element to filteredArray
+
+// Step 3: Return the filtered array:
+//    return filteredArray

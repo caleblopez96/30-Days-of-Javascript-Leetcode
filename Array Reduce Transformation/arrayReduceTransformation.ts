@@ -8,9 +8,10 @@ If the length of the array is 0, the function should return init.
 Please solve it without using the built-in Array.reduce method.
 */
 
-// @ts-nocheck
+// @ts-ignore: duplicate type name
 type Fn = (accum: number, curr: number) => number;
 
+//@ts-ignore: duplicate function name
 function reduce(nums: number[], fn: Fn, init: number): number {
   let val = init;
   for (let i = 0; i < nums.length; i++) {
@@ -20,6 +21,7 @@ function reduce(nums: number[], fn: Fn, init: number): number {
 }
 
 // SOLUTION 2:
+//@ts-ignore: duplicate function name
 function reduce(nums: number[], fn: (acc: number, curr: number) => number, init: number): number {
   let val: number = init;
   for (const num of nums) {
@@ -31,15 +33,16 @@ function reduce(nums: number[], fn: (acc: number, curr: number) => number, init:
 // Step by step:
 
 // 1. Create an accumulator:
-// let val: number = init;
+//    let val = init;
 
-// 2. Iterate through the array
-// With a for loop: for (let i = 0; i < nums.length; i++) {}
-// OR
-// With a for...of loop: for (const num of nums) {}
+// 2. Iterate through the array:
+//    for (let i = 0; i < nums.length; i++) {}
+//    OR
+//    for (const num of nums) {}
 
 // 3. Update the accumulator during each iteration:
-// val = fn(val, num);
+//    In the for loop version, access each element by index: val = fn(val, nums[i]);
+//    In the for...of loop, access each element directly: val = fn(val, num)
 
 // 5. Return the accumulated result:
-// return val;
+//    return val;

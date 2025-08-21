@@ -13,7 +13,8 @@ const newArray = map(arr, plusone); // [2,3,4]
 The function increases each value in the array by one.
 */
 
-function mapped2(arr: number[], fn: (n: number, i: number) => number): number[] {
+//@ts-ignore: duplicate function name
+function map(arr: number[], fn: (n: number, i: number) => number): number[] {
   for (let i: number = 0; i < arr.length; i++) {
     arr[i] = fn(arr[i], i);
   }

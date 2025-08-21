@@ -1,28 +1,5 @@
 /*
 Write a function createHelloWorld. It should return a new function that always returns "Hello World".
-
-Example 1:
-
-Input: args = []
-Output: "Hello World"
-Explanation:
-const f = createHelloWorld();
-f(); // "Hello World"
-
-The function returned by createHelloWorld should always return "Hello World".
-Example 2:
-
-Input: args = [{},null,42]
-Output: "Hello World"
-Explanation:
-const f = createHelloWorld();
-f({}, null, 42); // "Hello World"
-
-Any arguments could be passed to the function but it should still always return "Hello World".
-
-Constraints:
-
-0 <= args.length <= 10
 */
 
 // solution:
@@ -39,3 +16,15 @@ function createHelloWorld() {
  * const f = createHelloWorld();
  * f(); // "Hello World"
  */
+
+// Step by step:
+
+// Step 1: Create a function that returns another function:
+//    function createHelloWorld(){}
+
+// Step 2: Return a function that accepts any number of arguments (...args)
+//    but always returns the string "Hello World":
+//    return function(...args) { return "Hello World" }
+
+// Step 3: Call createHelloWorld() to get the inner function, then invoke it:
+//    f(); // returns "Hello World"

@@ -16,7 +16,7 @@ Please solve it without the built-in Array.filter method.
  * @return {number[]}
  */
 
-var filter = function (arr, fn) {
+function filter(arr, fn) {
   let filteredArray = [];
   for (let i = 0; i < arr.length; i++) {
     if (fn(arr[i], i)) {
@@ -24,9 +24,17 @@ var filter = function (arr, fn) {
     }
   }
   return filteredArray;
-};
+}
 
 // Step by step:
 
-// 1. Create an empty array to hold the filtered elements:
-//    let filteredArray = [];
+// Step 1: Create an empty array to hold the filtered elements:
+//    let filteredArray = []
+
+// Step 2: Loop over the array passed to the filter() function:
+//    for (let i = 0; i < arr.length; i++) {}
+//    - Call the filtering function on each element and its index: fn(arr[i], i)
+//    - If result is truthy, push the element to filteredArray
+
+// Step 3: Return the filtered array:
+//    return filteredArray
