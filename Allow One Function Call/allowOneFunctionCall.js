@@ -15,7 +15,7 @@ function once(fn) {
   let result;
   return function (...args) {
     if (hasBeenCalled) {
-      return;
+      return undefined;
     }
     result = fn(...args);
     hasBeenCalled = true;
